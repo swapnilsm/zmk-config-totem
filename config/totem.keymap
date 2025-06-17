@@ -66,14 +66,14 @@
         smart_period: smart_period {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DOT &sl 8>;
+            bindings = <&kp DOT &sl 0>;
             label = "SMART_PERIOD";
         };
 
         smart_qmark: smart_qmark {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp QMARK &sl 8>;
+            bindings = <&kp QMARK &sl 0>;
             label = "SMART_QMARK";
         };
 
@@ -290,55 +290,6 @@
             bindings = <&shifted>, <&kp>;
         };
 
-        sticky_forever: sticky_forever {
-            compatible = "zmk,behavior-sticky-key";
-            label = "STICKY_FOREVER";
-            bindings = <&m_press_key_twice>;
-            #binding-cells = <1>;
-            release-after-ms = <300000>;
-            ignore-modifiers;
-        };
-
-        cm_gui: cm_gui {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CM_GUI";
-            bindings = <&sticky_forever LGUI>, <&m_release_key_twice LGUI>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI)>;
-            keep-mods = <(MOD_LGUI)>;
-        };
-
-        cm_alt: cm_alt {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CM_ALT";
-            bindings = <&sticky_forever LALT>, <&m_release_key_twice LALT>;
-
-            #binding-cells = <0>;
-            keep-mods = <(MOD_LALT)>;
-            mods = <(MOD_LALT)>;
-        };
-
-        cm_ctrl: cm_ctrl {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CM_CTRL";
-            bindings = <&sticky_forever LCTRL>, <&m_release_key_twice LCTRL>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LCTL)>;
-        };
-
-        cm_sft: cm_sft {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CM_SFT";
-            bindings = <&sticky_forever LSHFT>, <&m_release_key_twice LSHFT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
-        };
-
         shift_caps: shift_caps {
             compatible = "zmk,behavior-tap-dance";
             label = "SHIFT_CAPS";
@@ -423,7 +374,7 @@
 
         default_layer {
             bindings = <
-         &kp Q         &lt 9 W      &kp E        &lt 7 R            &kp T        &kp Y      &kp U            &kp I                &kp O             &kp P
+         &kp Q         &lt 8 W      &kp E        &lt 7 R            &kp T        &kp Y      &kp U            &kp I                &kp O             &kp P
          &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LEFT_SHIFT F  &kp G        &kp H      &hmr LSHIFT J    &hmr LGUI K          &hmr LALT L       &hmr LCTRL SQT
 &kp TAB  &kp Z         &kp X        &kp C        &kp V              &kp B        &kp N      &kp M            &ht_kp SEMI COMMA    &ht_kp COLON DOT  &kp SLASH       &kp BACKSPACE
                                     &lt 5 ESC    &lt 2 SPACE        &lt 1 TAB    &lt 4 RET  &lt 6 BACKSPACE  &smart_shift_lt 3 0
@@ -490,15 +441,6 @@
        &trans  &trans  &trans  &trans  &trans    &kp LA(LC(LG(H)))  &kp LA(LC(LG(J)))  &kp LA(LC(LG(K)))      &kp LA(LG(LC(L)))    &trans
 &none  &trans  &trans  &trans  &trans  &trans    &trans             &kp LA(LC(LG(M)))  &kp LC(LA(LG(COMMA)))  &kp LC(LA(LG(DOT)))  &trans  &none
                        &trans  &trans  &trans    &trans             &trans             &trans
-            >;
-        };
-
-        sentence_layer {
-            bindings = <
-       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
-                       &trans  &trans  &trans    &trans  &trans  &none
             >;
         };
 
