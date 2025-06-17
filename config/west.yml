@@ -1,11 +1,22 @@
 manifest:
+  defaults:
+    revision: v0.2.1
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: urob
+      url-base: https://github.com/urob
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
       import: app/west.yml
+    - name: zmk-auto-layer
+      remote: urob
+    - name: zmk-leader-key
+      remote: urob
+    - name: zmk-adaptive-key
+      remote: urob
+    - name: zmk-tri-state
+      remote: urob
   self:
     path: config
