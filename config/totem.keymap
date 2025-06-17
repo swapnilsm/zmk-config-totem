@@ -435,7 +435,7 @@
        &swap_gr                &swap                 &mm_shift_tab         &kp LC(TAB)               &none    &none     &none      &none      &none        &kp PAGE_UP
        &sticky_ht LCTRL LCTRL  &sticky_ht LALT LALT  &sticky_ht LGUI LGUI  &sticky_ht LSHIFT LSHIFT  &none    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT    &kp PAGE_DOWN
 &none  &none                   &none                 &kp LC(LEFT)          &kp LC(RIGHT)             &none    &none     &mkp LCLK  &mkp RCLK  &key_repeat  &none          &none
-                                                     &none                 &none                     &none    &none     &none      &none
+                                                     &bootloader           &none                     &none    &none     &none      &none
             >;
         };
 
@@ -459,10 +459,10 @@
 
         macro_layer {
             bindings = <
-       &lock     &none  &email    &none  &none         &none  &mark_all_read  &mark_read  &none        &pin_code
-       &address  &none  &test_pd  &none  &none         &none  &none           &none       &quick_lgtm  &quick_approve
-&none  &none     &none  &snap     &none  &birthdate    &none  &phone          &none       &rmz         &lock           &none
-                        &none     &none  &kp TAB       &none  &none           &none
+       &lock     &none  &email    &none  &none         &none  &mark_all_read  &mark_read   &none        &pin_code
+       &address  &none  &test_pd  &none  &none         &none  &none           &none        &quick_lgtm  &quick_approve
+&none  &none     &none  &snap     &none  &birthdate    &none  &phone          &none        &rmz         &lock           &none
+                        &none     &none  &kp TAB       &none  &none           &bootloader
             >;
         };
 
