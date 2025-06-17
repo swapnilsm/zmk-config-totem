@@ -9,7 +9,6 @@
 //                                                                      ▀  ▀  ▀
 //
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-       
 
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
@@ -424,87 +423,80 @@
 
         default_layer {
             bindings = <
-       &kp Q         &lt 9 W      &kp E        &lt 7 R            &kp T                             &kp Y      &kp U            &kp I                &kp O             &kp P
-  &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LEFT_SHIFT F  &kp G                                   &kp H      &hmr LSHIFT J    &hmr LGUI K          &hmr LALT L       &hmr LCTRL SQT
-&none  &kp Z         &kp X        &kp C        &kp V              &kp B        &kp N      &kp M            &ht_kp SEMI COMMA    &ht_kp COLON DOT  &kp SLASH       &none
-                                  &lt 5 ESC    &lt 2 SPACE        &lt 1 TAB    &lt 4 RET  &lt 6 BACKSPACE  &smart_shift_lt 3 0
+         &kp Q         &lt 9 W      &kp E        &lt 7 R            &kp T        &kp Y      &kp U            &kp I                &kp O             &kp P
+         &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LEFT_SHIFT F  &kp G        &kp H      &hmr LSHIFT J    &hmr LGUI K          &hmr LALT L       &hmr LCTRL SQT
+&kp TAB  &kp Z         &kp X        &kp C        &kp V              &kp B        &kp N      &kp M            &ht_kp SEMI COMMA    &ht_kp COLON DOT  &kp SLASH       &kp BACKSPACE
+                                    &lt 5 ESC    &lt 2 SPACE        &lt 1 TAB    &lt 4 RET  &lt 6 BACKSPACE  &smart_shift_lt 3 0
             >;
-
         };
 
         navigation_layer {
             bindings = <
-       &swap_gr                &swap                 &mm_shift_tab         &kp LC(TAB)               &none                            &none     &none      &none      &none        &kp PAGE_UP
-  &sticky_ht LCTRL LCTRL  &sticky_ht LALT LALT  &sticky_ht LGUI LGUI  &sticky_ht LSHIFT LSHIFT  &none                            &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT    &kp PAGE_DOWN
+       &swap_gr                &swap                 &mm_shift_tab         &kp LC(TAB)               &none    &none     &none      &none      &none        &kp PAGE_UP
+       &sticky_ht LCTRL LCTRL  &sticky_ht LALT LALT  &sticky_ht LGUI LGUI  &sticky_ht LSHIFT LSHIFT  &none    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT    &kp PAGE_DOWN
 &none  &none                   &none                 &kp LC(LEFT)          &kp LC(RIGHT)             &none    &none     &mkp LCLK  &mkp RCLK  &key_repeat  &none          &none
                                                      &none                 &none                     &none    &none     &none      &none
             >;
-
         };
 
         number_layer {
             bindings = <
-       &none                   &kp LBRC              &kp RBRC              &kp LPAR                  &kp RPAR                            &none      &as N7  &as N8     &as N9  &none
-  &sticky_ht LCTRL LCTRL  &sticky_ht LALT LALT  &sticky_ht LGUI LGUI  &sticky_ht LSHIFT LSHIFT  &none                               &none      &as N4  &as N5     &as N6  &as EQUAL
-&none  &none                   &none                 &none                 &as LBKT                  &as RBKT   &as GRAVE  &as N1  &as N2     &as N3  &as BSLH   &none
-                                                     &none                 &none                     &none      &none      &as N0  &as MINUS
+       &none                   &kp LBRC              &kp RBRC              &kp LPAR                  &kp RPAR    &none      &as N7  &as N8     &as N9  &none
+       &sticky_ht LCTRL LCTRL  &sticky_ht LALT LALT  &sticky_ht LGUI LGUI  &sticky_ht LSHIFT LSHIFT  &none       &none      &as N4  &as N5     &as N6  &as EQUAL
+&none  &none                   &none                 &none                 &as LBKT                  &as RBKT    &as GRAVE  &as N1  &as N2     &as N3  &as BSLH   &none
+                                                     &none                 &none                     &none       &none      &as N0  &as MINUS
             >;
-
-       };
+        };
 
         other_layer {
             bindings = <
-       &none  &none  &none  &none  &none                &none        &none  &none  &none  &none
-  &none  &none  &none  &none  &none                &none        &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none   &none        &none  &none  &none  &none  &none
-                     &none  &none  &none   &bootloader  &none  &none
+       &none  &none  &none  &none  &none    &none        &none  &none  &none  &none
+       &none  &none  &none  &none  &none    &none        &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none        &none  &none  &none  &none  &none
+                     &none  &none  &none    &bootloader  &none  &none
             >;
-
         };
 
         macro_layer {
             bindings = <
-       &lock     &none  &email    &none  &none                                 &none  &mark_all_read  &mark_read  &none        &pin_code
-  &address  &none  &test_pd  &none  &none                                 &none  &none           &none       &quick_lgtm  &quick_approve
-&none  &none     &none  &snap     &none  &birthdate   &none  &phone          &none       &rmz         &lock           &none
-                        &none     &none  &kp TAB      &none  &none           &none
+       &lock     &none  &email    &none  &none         &none  &mark_all_read  &mark_read  &none        &pin_code
+       &address  &none  &test_pd  &none  &none         &none  &none           &none       &quick_lgtm  &quick_approve
+&none  &none     &none  &snap     &none  &birthdate    &none  &phone          &none       &rmz         &lock           &none
+                        &none     &none  &kp TAB       &none  &none           &none
             >;
-
         };
 
         function_layer {
             bindings = <
-       &ext_power EP_OFF  &ext_power EP_ON  &bt BT_CLR    &none         &sys_reset                             &kp F12  &kp F7  &kp F8  &kp F9  &rmz
-  &none              &none             &none         &none         &none                                  &kp F11  &kp F4  &kp F5  &kp F6  &none
-&none  &bt BT_SEL 0       &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3  &none         &kp F10  &kp F1  &kp F2  &kp F3  &lock  &none
-                                            &none         &kp CAPSLOCK  &bootloader   &none    &none   &none
+       &ext_power EP_OFF  &ext_power EP_ON  &bt BT_CLR    &none         &sys_reset     &kp F12  &kp F7  &kp F8  &kp F9  &rmz
+       &none              &none             &none         &none         &none          &kp F11  &kp F4  &kp F5  &kp F6  &none
+&none  &bt BT_SEL 0       &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3  &none          &kp F10  &kp F1  &kp F2  &kp F3  &lock  &none
+                                            &none         &kp CAPSLOCK  &bootloader    &none    &none   &none
             >;
-
         };
 
         hyper_layer {
             bindings = <
-       &kp LS(LG(LA(LC(Q))))  &kp LG(LA(LS(LC(W))))  &kp LG(LS(LA(LC(E))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))                            &sys_reset             &kp LS(LA(LC(LG(U))))  &kp LS(LG(LC(LA(I))))      &kp LS(LA(LC(LG(O))))    &kp LS(LA(LC(LG(P))))
-  &kp LS(LG(LA(LC(A))))  &kp LG(LA(LS(LC(S))))  &kp LG(LS(LA(LC(D))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(G))))                            &kp LS(LA(LC(LG(H))))  &kp LS(LA(LC(LG(J))))  &kp LS(LG(LC(LA(K))))      &kp LS(LA(LC(LG(L))))    &kp LS(LA(LC(LG(SQT))))
-&none  &kp LS(LG(LA(LC(Z))))  &kp LG(LA(LS(LC(X))))  &kp LG(LS(LA(LC(C))))  &kp LS(LA(LC(LG(V))))  &kp LS(LA(LC(LG(B))))   &kp LS(LA(LC(LG(N))))  &kp LS(LA(LC(LG(M))))  &kp LS(LG(LC(LA(COMMA))))  &kp LS(LA(LC(LG(DOT))))  &kp LS(LA(LC(LG(FSLH))))  &none
-                                                     &none                  &none                  &kp LG(GRAVE)           &none                  &none                  &none
+       &kp LS(LG(LA(LC(Q))))  &kp LG(LA(LS(LC(W))))  &kp LG(LS(LA(LC(E))))  &kp LS(LA(LC(LG(R))))  &kp LS(LA(LC(LG(T))))    &sys_reset             &kp LS(LA(LC(LG(U))))  &kp LS(LG(LC(LA(I))))      &kp LS(LA(LC(LG(O))))    &kp LS(LA(LC(LG(P))))
+       &kp LS(LG(LA(LC(A))))  &kp LG(LA(LS(LC(S))))  &kp LG(LS(LA(LC(D))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(G))))    &kp LS(LA(LC(LG(H))))  &kp LS(LA(LC(LG(J))))  &kp LS(LG(LC(LA(K))))      &kp LS(LA(LC(LG(L))))    &kp LS(LA(LC(LG(SQT))))
+&none  &kp LS(LG(LA(LC(Z))))  &kp LG(LA(LS(LC(X))))  &kp LG(LS(LA(LC(C))))  &kp LS(LA(LC(LG(V))))  &kp LS(LA(LC(LG(B))))    &kp LS(LA(LC(LG(N))))  &kp LS(LA(LC(LG(M))))  &kp LS(LG(LC(LA(COMMA))))  &kp LS(LA(LC(LG(DOT))))  &kp LS(LA(LC(LG(FSLH))))  &none
+                                                     &none                  &none                  &kp LG(GRAVE)            &none                  &none                  &none
             >;
-
         };
 
         win_man_layer {
             bindings = <
-       &trans  &trans  &trans  &trans  &trans                  &kp LA(LC(LG(Y)))  &kp LA(LG(LC(U)))  &kp LA(LC(LG(I)))      &kp LA(LC(LG(O)))    &trans
-  &trans  &trans  &trans  &trans  &trans                  &kp LA(LC(LG(H)))  &kp LA(LC(LG(J)))  &kp LA(LC(LG(K)))      &kp LA(LG(LC(L)))    &trans
-&none  &trans  &trans  &trans  &trans  &trans   &trans             &kp LA(LC(LG(M)))  &kp LC(LA(LG(COMMA)))  &kp LC(LA(LG(DOT)))  &trans  &none
-                       &trans  &trans  &trans   &trans             &trans             &trans
+       &trans  &trans  &trans  &trans  &trans    &kp LA(LC(LG(Y)))  &kp LA(LG(LC(U)))  &kp LA(LC(LG(I)))      &kp LA(LC(LG(O)))    &trans
+       &trans  &trans  &trans  &trans  &trans    &kp LA(LC(LG(H)))  &kp LA(LC(LG(J)))  &kp LA(LC(LG(K)))      &kp LA(LG(LC(L)))    &trans
+&none  &trans  &trans  &trans  &trans  &trans    &trans             &kp LA(LC(LG(M)))  &kp LC(LA(LG(COMMA)))  &kp LC(LA(LG(DOT)))  &trans  &none
+                       &trans  &trans  &trans    &trans             &trans             &trans
             >;
         };
 
         sentence_layer {
             bindings = <
-       &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
+       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
 &none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
                        &trans  &trans  &trans    &trans  &trans  &none
             >;
@@ -512,10 +504,10 @@
 
         word_layer {
             bindings = <
-       &trans  &trans  &trans  &trans     &trans                  &kp LG(BACKSPACE)  &kp LA(BACKSPACE)  &kp LA(DELETE)  &kp LC(K)      &trans
-  &trans  &trans  &trans  &kp LSHFT  &trans                  &kp LA(LEFT)       &kp LG(LEFT)       &kp LG(RIGHT)   &kp LA(RIGHT)  &trans
-&none  &trans  &trans  &trans  &trans     &trans   &trans             &trans             &select_line    &select_word   &trans  &none
-                       &trans  &trans     &trans   &trans             &trans             &trans
+       &trans  &trans  &trans  &trans     &trans    &kp LG(BACKSPACE)  &kp LA(BACKSPACE)  &kp LA(DELETE)  &kp LC(K)      &trans
+       &trans  &trans  &trans  &kp LSHFT  &trans    &kp LA(LEFT)       &kp LG(LEFT)       &kp LG(RIGHT)   &kp LA(RIGHT)  &trans
+&none  &trans  &trans  &trans  &trans     &trans    &trans             &trans             &select_line    &select_word   &trans  &none
+                       &trans  &trans     &trans    &trans             &trans             &trans
             >;
         };
     };
